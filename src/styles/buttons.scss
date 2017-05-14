@@ -1,0 +1,18 @@
+.btn {
+  color: $white;
+  font-size: $form-font-size;
+  border-radius: $form-border-radius;
+  -webkit-transition: all,.1s,linear;
+  -o-transition: all,.1s,linear;
+  transition: all,.1s,linear;
+  border: 0;
+  font-weight: normal;
+  font-family: $unica-med;
+  padding: 10px 18px;
+  height: 45px;
+  line-height: 1.55;
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}

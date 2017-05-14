@@ -1,0 +1,23 @@
+.btn-default {
+  background: #f25c55;
+  color: #fff;
+  font-family: 'Neue Haas Unica W01 Regular', Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  padding: 10px 18px;
+  &:hover {
+    background: #ccd7cc;
+    color: #313339;
+    text-decoration: none;
+  }
+}
+.data-tables {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.postcode-table,
+.suburb-table {
+  padding: 20px;
+}

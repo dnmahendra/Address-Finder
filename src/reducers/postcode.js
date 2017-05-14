@@ -1,28 +1,29 @@
-import { REQUEST_POSTCODE, RECEIVE_POSTCODE } from '../actions';
+import { REQUEST_POSTCODE, RECEIVE_POSTCODE, LOAD_POSTCODE_DATA } from '../actions';
 export const initialState = {
   postcodeData: [],
-  isFetching: true,
-  postcode: 1,
+  postcode: '',
 };
 
 export default function postcodeReducer (state = initialState, action) {
   switch (action.type) {
+    case LOAD_POSTCODE_DATA: {
+      return {
+        ...state,
+      }
+    }
     case REQUEST_POSTCODE:
       return {
         ...state,
-        isFetching: true,
         postcode: action.postcode,
       };
     case RECEIVE_POSTCODE:
       return action.postcodeData === null
         ? {
           ...state,
-          isFetching: false,
         }
         : {
           ...state,
-          isFetching: false,
-          postcodeData: action.postcodeData,
+          postcodeData: action.postcodeData.localities.locality,
         };
     default:
       return state;

@@ -1,0 +1,33 @@
+//colors
+$grey-light:            #EAEAEF;
+$grey:                  #B3B3B3;
+$grey-dark:             #858B88;
+$grey-darker:           #313339;
+$grey-lightest:         #FBFBFC;
+$brand-red:             #CF4128;
+$grey-darkest:          #121712;
+$black:                 $grey-darkest;
+$green-grey:            #F5FAF6;
+$green-lightest:        #DBF3E6;
+$white:                 #fff;
+
+// Forms
+$form-font-size : 15px;
+$form-line-height: 1.4;
+$form-border-radius: 2px;
+$form-font-weight: 400;
+$form-border-color: $grey-light;
+$form-text-color: $grey-darker;
+$form-placeholder-color: $grey;
+$form-box-shadow: none;
+$form-box-shadow-hover: 0px 0px 5px 0px rgba(18,23,18,0.06);
+$form-height: 45px;
+
+//== Media queries breakpoints
+$screen-sm:                  768px !default;
+$screen-sm-min:              $screen-sm !default;
+$screen-xs-max:              ($screen-sm-min - 1) !default;
+
+$unica-heavy: 'Neue Haas Unica W01 Heavy', Helvetica, Arial, sans-serif;
+$unica-reg: 'Neue Haas Unica W01 Regular', Helvetica, Arial, sans-serif;
+$unica-med: 'Neue Haas Unica W01 Medium It', Helvetica, Arial, sans-serif;

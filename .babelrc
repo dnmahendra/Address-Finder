@@ -4,5 +4,15 @@
     "development": {
       "presets": ["react-hmre"]
     }
-  }
+  },
+  "plugins": [
+    ["transform-imports", {
+      "react-bootstrap": {
+        "transform": "react-bootstrap/lib/${member}",
+        "preventFullImport": true
+      },
+    }],
+    "transform-runtime",
+    "transform-async-to-generator",
+  ],
 }

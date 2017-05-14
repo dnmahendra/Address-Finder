@@ -1,8 +1,12 @@
-import { combineReducers} from 'redux';
-import postcodeReducer from './postcode';
+import { combineReducers} from 'redux'
+import postcode from './postcode'
+import form from './form'
+import suburb from './suburb'
 
 const rootReducer = combineReducers({
-  postcodeReducer,
-});
+  form,
+  postcode,
+  suburb,
+})
 
-export default rootReducer;
+export default rootReducer

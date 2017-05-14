@@ -1,0 +1,56 @@
+@import "./variables";
+
+.form-group {
+  padding: 0;
+}
+.form-control {
+  font-size: $form-font-size;
+  height: $form-height;
+  line-height: $form-line-height;
+  border: 1px solid $form-border-color;
+  box-shadow: $form-box-shadow;
+  border-radius: 2px;
+  padding: 5px 15px 6px 15px;
+  color: $grey-darker;
+  &:focus {
+    border-color: $form-border-color;
+    outline: 0;
+    box-shadow: $form-box-shadow-hover;
+    background: $grey-lightest;
+  }
+}
+select.form-control {
+  -webkit-appearance: none;
+}
+.input-group-addon {
+  padding: 5px 15px 6px 15px;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1;
+  color: $form-text-color;
+  text-align: center;
+  background-color: $grey-lightest;
+  border: 1px solid $form-border-color;
+  border-radius: 2px;
+}
+
+/* Style the placeholder text */
+::-webkit-input-placeholder {
+color: $form-placeholder-color !important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+color: $form-placeholder-color !important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+color: $form-placeholder-color !important;
+}
+
+:-ms-input-placeholder {
+color: $form-placeholder-color !important;
+}
+
+.has-error .form-control {
+  border-color: $brand-red;
+}
