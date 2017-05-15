@@ -97,6 +97,16 @@ export class AddressFormContainer extends Component {
   }
   isSuburbValid = (value) => {
     if (required(value)) {
+      this.setState({ suburbValidate: 'error' })
+      this.setState({ suburbHelp: 'suburb is needed' })
+      return false
+    }
+    return true
+  }
+  isStateValid = (value) => {
+    if (value === 'empty' || required(value)) {
+      this.setState({ stateValidate: 'error' })
+      this.setState({ stateHelp: 'state is needed' })
       return false
     }
     return true
@@ -104,7 +114,7 @@ export class AddressFormContainer extends Component {
   handleSubmit = (e) => {
     e.preventDefault()
     const { postcode, suburb, state, postcodeData } = this.props
-    if (this.isPostcodeValid(postcode) && this.isSuburbValid(suburb) && state !== 'empty') {
+    if (this.isPostcodeValid(postcode) && this.isSuburbValid(suburb) && this.isStateValid(state)) {
       this.fetchPostcodeData(postcode)
       this.fetchSuburbData(suburb)
     }

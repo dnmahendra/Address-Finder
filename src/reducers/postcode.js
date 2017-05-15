@@ -1,3 +1,5 @@
+import concat from 'lodash/concat'
+
 import { REQUEST_POSTCODE, RECEIVE_POSTCODE, LOAD_POSTCODE_DATA } from '../actions';
 export const initialState = {
   postcodeData: [],
@@ -23,7 +25,7 @@ export default function postcodeReducer (state = initialState, action) {
         }
         : {
           ...state,
-          postcodeData: action.postcodeData.localities.locality,
+          postcodeData: concat([], action.postcodeData.localities.locality),
         };
     default:
       return state;

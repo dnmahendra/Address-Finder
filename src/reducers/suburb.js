@@ -1,3 +1,5 @@
+import concat from 'lodash/concat'
+
 import { REQUEST_SUBURB, RECEIVE_SUBURB, LOAD_SUBURB_DATA } from '../actions'
 export const initialState = {
   suburbData: [],
@@ -23,7 +25,7 @@ export default function suburbReducer (state = initialState, action) {
         }
         : {
           ...state,
-          suburbData: action.suburbData.localities.locality,
+          suburbData: concat([], action.suburbData.localities.locality),
         };
     default:
       return state;
